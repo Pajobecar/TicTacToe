@@ -1,0 +1,20 @@
+<div style="display: grid;">
+<h1 style="justify-self: center;">Current Player: {{ player }} </h1>
+</div>
+<div style="display: grid; margin: 2vh;">
+<button nbButton hero status="danger" style="display:block; justify-self: center;" (click)="newGame()">Start new Game</button>
+</div>
+<div style="display: grid;" >
+<h2 *ngIf="winner" style="justify-self: center;" >
+    Player {{ winner }} won the game!
+</h2>
+</div>
+
+<main style="justify-content: center; padding-bottom: 5vh;">
+    <app-square style="background-color: #d5bfff !important;" 
+        *ngFor='let val of squares; let i = index' 
+        [value]='val'
+        (click)='makeMove(i)'> 
+
+    </app-square>
+</main>
