@@ -10,4 +10,11 @@ app-square {
     height: 20vh;
     
 }
-
+@media only screen and (max-width: 600px) {
+    main {
+        grid-template-columns: 15vh 15vh 15vh;
+    }
+    app-square {
+        height: 15vh;
+    }
+  }
